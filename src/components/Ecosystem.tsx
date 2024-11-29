@@ -78,10 +78,13 @@ const EcoSystem: React.FC<Props> = () => {
         </motion.div>
 
         {/* Cloud Base Management System */}
-        <motion.div   transition={{ delay: 0.9 }}
+        <motion.div
+          transition={{ delay: 0.9 }}
           initial={{ opacity: 0, x: -75 }}
           whileInView={{ opacity: 1, x: 0 }}
-          layout className="flex flex-col items-center flex-1">
+          layout
+          className="flex flex-col items-center flex-1"
+        >
           <div className="flex flex-row gap-5 items-center border rounded-xl p-3 border-dashed border-[#d3d3d3]">
             <img src={cloud} className="object-cover" />
           </div>
@@ -99,14 +102,16 @@ const EcoSystem: React.FC<Props> = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
-        {/* Gateway Section */}
-        <motion.div  transition={{ delay: 1.1 }}
+        {/* Users section */}
+        <motion.div
+          transition={{ delay: 1.1 }}
           initial={{ opacity: 0, x: -75 }}
           whileInView={{ opacity: 1, x: 0 }}
-          layout className="flex flex-col items-center flex-1">
+          layout
+          className="flex flex-col items-center flex-1"
+        >
           <div className="flex flex-row gap-5 items-center border rounded-xl p-5 border-dashed border-[#d3d3d3]">
             <img src={users} className="object-cover" />{" "}
-            {/* Fixed image size */}
           </div>
 
           {/* Paragraphs Container */}
@@ -122,13 +127,15 @@ const EcoSystem: React.FC<Props> = () => {
         </motion.div>
 
         {/* Evaluation Section */}
-        <motion.div  transition={{ delay: 1.3 }}
+        <motion.div
+          transition={{ delay: 1.3 }}
           initial={{ opacity: 0, x: -75 }}
           whileInView={{ opacity: 1, x: 0 }}
-          layout className="flex flex-col items-center flex-1">
+          layout
+          className="flex flex-col items-center flex-1"
+        >
           <div className="flex flex-row gap-5 items-center border rounded-xl p-3 border-dashed border-[#d3d3d3]">
             <img src={evaluation} className="object-cover" />
-            {/* Fixed image size */}
           </div>
 
           {/* Paragraphs Container */}

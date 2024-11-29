@@ -21,7 +21,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 a {
   font-size:x-small;
   font-weight: 10;
@@ -48,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -87,6 +88,5 @@ button:focus-visible {
 @media (min-width: 1024px) {
   body {
     width: 100vw;
-  
   }
 }

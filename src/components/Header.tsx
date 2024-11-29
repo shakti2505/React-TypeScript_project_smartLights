@@ -30,9 +30,6 @@ const Header: React.FC = () => {
           >
             Software Services
           </a>
-          {/* <button className="bg-blue-500 text-white py-2 px-4 sm:py-2.5 sm:px-6 md:py-1.5 md:px-9 hover:bg-blue-600">
-            Login
-          </button> */}
           <Button />
         </div>
       </div>
