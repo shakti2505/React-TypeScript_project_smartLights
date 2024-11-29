@@ -4,6 +4,8 @@ import gateway from "../assets/images/gateway_png.png";
 import cloud from "../assets/images/cloud_based management.png";
 import users from "../assets/images/users_png.png";
 import evaluation from "../assets/images/evaluation_png.png";
+import { motion } from "motion/react";
+
 interface Props {
   // define your props here
 }
@@ -11,18 +13,30 @@ interface Props {
 const EcoSystem: React.FC<Props> = () => {
   return (
     <div className="flex flex-col p-8 lg:p-48 gap-8 bg-custom-linear-gradient-light-Eco-system">
-      <div className="flex flex-col items-start gap-3">
+      <motion.div
+        transition={{ delay: 0.3 }}
+        initial={{ opacity: 0, x: -75 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        layout
+        className="flex flex-col items-start gap-3"
+      >
         <div className="inline-block text-left bg-custom-linear-gradient-ecosystem-label p-3 border-transparent">
           <p className="text-xl font-medium text-blue-700">Ecosystem</p>
         </div>
         <p className="text-4xl text-black text-left">
           How does a smart street light ecosystem work?
         </p>
-      </div>
+      </motion.div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center gap-10 w-full ">
         {/* Street Light Controller */}
-        <div className="flex flex-col items-center flex-1 border">
+        <motion.div
+          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          layout
+          className="flex flex-col items-center flex-1"
+        >
           <div className="flex flex-row gap-5 items-center">
             <StreeLightController />
             <StreeLightController />
@@ -38,9 +52,15 @@ const EcoSystem: React.FC<Props> = () => {
               the brightness of the street lamp.
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* Gateway Section */}
-        <div className="flex flex-col items-center flex-1">
+        <motion.div
+          transition={{ delay: 0.7 }}
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          layout
+          className="flex flex-col items-center flex-1"
+        >
           <div className="flex flex-row gap-5 items-center border rounded-xl p-5 border-dashed border-[#d3d3d3]">
             <img src={gateway} className="object-cover" />
           </div>
@@ -55,10 +75,13 @@ const EcoSystem: React.FC<Props> = () => {
               Management software.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Cloud Base Management System */}
-        <div className="flex flex-col items-center flex-1">
+        <motion.div   transition={{ delay: 0.9 }}
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          layout className="flex flex-col items-center flex-1">
           <div className="flex flex-row gap-5 items-center border rounded-xl p-3 border-dashed border-[#d3d3d3]">
             <img src={cloud} className="object-cover" />
           </div>
@@ -72,12 +95,15 @@ const EcoSystem: React.FC<Props> = () => {
               Collect information from multiple gateways.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
         {/* Gateway Section */}
-        <div className="flex flex-col items-center flex-1">
+        <motion.div  transition={{ delay: 1.1 }}
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          layout className="flex flex-col items-center flex-1">
           <div className="flex flex-row gap-5 items-center border rounded-xl p-5 border-dashed border-[#d3d3d3]">
             <img src={users} className="object-cover" />{" "}
             {/* Fixed image size */}
@@ -93,10 +119,13 @@ const EcoSystem: React.FC<Props> = () => {
               by the System Managers
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Evaluation Section */}
-        <div className="flex flex-col items-center flex-1">
+        <motion.div  transition={{ delay: 1.3 }}
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          layout className="flex flex-col items-center flex-1">
           <div className="flex flex-row gap-5 items-center border rounded-xl p-3 border-dashed border-[#d3d3d3]">
             <img src={evaluation} className="object-cover" />
             {/* Fixed image size */}
@@ -112,7 +141,7 @@ const EcoSystem: React.FC<Props> = () => {
               lighting systems.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
